@@ -1,0 +1,21 @@
+class TestPackage(RpmPackage):
+
+    name = "mfp"
+    version = "0.2.1"
+    release = "1"
+    description = "multi format packager"
+    license = "Apache 2.0"
+    vendor = "tannerjc.net"
+    summary = "multi format packager"
+    group = "System Environment/Base"
+    packager = "tanner.jc@gmail.com"
+    url = "https://github.com/jctanner/mfp"
+
+    buildrequires = ['python-rpmfluff', 'python-setuptools']
+
+    def setup(r):
+        r.addArchive("https://github.com/jctanner/mfp/archive/mfp-0.2.tar.gz")
+
+        r.Run("cd mfp-mfp-0.2")
+        r.Run("python setup.py install")
+
