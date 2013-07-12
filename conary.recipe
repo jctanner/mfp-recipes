@@ -14,7 +14,7 @@ class TestPackage(RpmPackage):
     buildrequires = ['python-devel', 'openssl-devel', 'elfutils-libelf-devel', 'sqlite-devel']
 
     def setup(r):
-        r.addArchive("https://bitbucket.org/rpathsync/conary/get/conary-2.4.13.tar.gz")
+        r.addArchive("http://bitbucket.org/rpathsync/conary/get/conary-2.4.13.tar.gz")
 
         # cd rpathsync-conary-9e82ab6709a2
         r.Run("cd rpathsync-conary-*")
